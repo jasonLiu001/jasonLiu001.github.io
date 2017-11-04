@@ -9,3 +9,22 @@ This a git repository generate by Jekyll without no database. Just some static f
 
 > 如果还是一脸蒙圈的话，这里介绍一篇非常详细的文章，建站参考：[Creating and Hosting a Personal Site on GitHub](http://jmcglone.com/guides/github-pages/")
 
+#### 补充
+
+[`GitHub Pages`支持的网站主题](https://pages.github.com/themes/)
+
+- [Architect](https://github.com/pages-themes/architect)
+- [Cayman](https://github.com/pages-themes/cayman)
+- [Dinky](https://github.com/pages-themes/dinky)
+- [Hacker](https://github.com/pages-themes/hacker)
+- [Leap day](https://github.com/pages-themes/leap-day)
+- [Merlot](https://github.com/pages-themes/merlot)
+- [Midnight](https://github.com/pages-themes/midnight)
+- [Minima](https://github.com/jekyll/minima)
+- [Minimal](https://github.com/pages-themes/minimal)
+- [Modernist](https://github.com/pages-themes/modernist)
+- [Slate](https://github.com/pages-themes/slate)
+- [Tactile](https://github.com/pages-themes/tactile)
+- [Time machine](https://github.com/pages-themes/time-machine)
+
+*See the GitHub Pages help documentation for instructions on how to add a theme to your GitHub Pages site, and follow The GitHub Blog for information on additional theme support.*
