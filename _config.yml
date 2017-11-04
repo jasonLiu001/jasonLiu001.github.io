@@ -25,9 +25,10 @@ github_username:  jasonLiu001
 
 # Build settings
 markdown: kramdown
-theme: minima
-plugins:
-  - jekyll-feed
+theme:jekyll-theme-awesome
+#theme: minima
+#plugins:
+  #- jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
