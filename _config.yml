@@ -25,7 +25,7 @@ github_username:  jasonLiu001
 
 # Build settings
 markdown: kramdown
-theme:Leap day
+theme:Midnight
 #theme: minima
 #plugins:
   #- jekyll-feed
