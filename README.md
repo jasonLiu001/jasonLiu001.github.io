@@ -7,7 +7,7 @@ This a git repository generate by Jekyll without no database. Just some static f
 
 如果还不清楚`GitHub Pages`是什么的话，可以参考[`GitHub Pages`](https://pages.github.com/)，了解`GitHub Pages`是什么之后，接下来你就可以学习`Jekyll`了，安装[`Jekyll官网`](https://jekyllrb.com/docs/home/)的说明搭建环境并构建自己的网站
 
-> 如果还是一脸蒙圈的话，这里介绍一篇非常详细的文章，建站参考：[Creating and Hosting a Personal Site on GitHub](http://jmcglone.com/guides/github-pages/")
+> 如果还是一脸蒙圈的话，这里介绍一篇非常详细的文章，建站参考：[Creating and Hosting a Personal Site on GitHub](http://jmcglone.com/guides/github-pages/)
 
 #### 补充
 
