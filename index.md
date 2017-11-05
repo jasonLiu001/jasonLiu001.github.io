@@ -4,6 +4,5 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: default
 ---
-+ [首页](/)
 + [文章](/blog)
 + [关于我](/about)
