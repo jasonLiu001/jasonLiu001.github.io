@@ -24,8 +24,8 @@ show_downloads: true
 # Build settings
 markdown: kramdown
 theme: jekyll-theme-midnight
-#plugins:
-  #- jekyll-feed
+plugins:
+  - jekyll-sitemap
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
