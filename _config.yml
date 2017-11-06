@@ -20,6 +20,11 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  jasonLiu001
+
+# Set this to a github repository to be used to host comments.
+github_comments_repository:  jasonLiu001/github-pages-comments
+
+# show download buttons.
 show_downloads: true
 # Build settings
 markdown: kramdown
