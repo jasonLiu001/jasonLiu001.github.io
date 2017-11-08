@@ -25,7 +25,7 @@ github_username:  jasonLiu001
 github_comments_repository:  jasonLiu001/github-pages-comments
 
 # 文章分页设置
-paginate: 1
+paginate: 2
 paginate_path: "/post/page:num/"
 
 # show download buttons.
