@@ -18,8 +18,8 @@ sudo apt-get install ruby-full
 gem install jekyll bundler
 ```
 > 说明：`rubygems`是`ruby`的包管理器，安装`Jekyll`时可参考[`Jekyll`官网](https://jekyllrb.com/docs/installation/)  
-> `bundler`是什么？bundler is a gem that manages other Ruby gems. It makes sure your gems and gem versions are compatible,   
-> and that you have all necessary dependencies each gem requires.
+> `bundler`是什么？  
+> bundler is a gem that manages other Ruby gems. It makes sure your gems and gem versions are compatible, and that you have all necessary dependencies each gem requires.
 
 3. 在当前目录下创建网站
 
