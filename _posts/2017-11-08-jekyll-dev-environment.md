@@ -5,12 +5,13 @@ Jekyll环境开发环境搭建
 2. `Linux`上安装了GCC和Make(通过gcc -v和make -v来检查是否已经安装)
 
 ### 环境搭建
-#### Ubunt
+#### Ubuntu
 1. 安装`Ruby`
 
 ```shell
 sudo apt-get install ruby-full
 ```
+
 2. 通过`rubygems`安装`Jekyll`和`Bundler`
 
 ```shell
@@ -41,6 +42,7 @@ bundle exec jekyll build
 sudo yum install ruby
 ##通过yum安装的ruby版本太旧，此时需要安装rvm来安装其他的ruby版本
 ```
+
 2. [可选]通过`rvm`来安装`ruby`  
 
 ```shell
