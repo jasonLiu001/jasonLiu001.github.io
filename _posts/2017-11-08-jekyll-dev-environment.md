@@ -55,7 +55,7 @@ rvm use 2.1
 
 ##通过rvm设置系统级的特定版本ruby
 rvm use 2.1 --default   
-```
+````
 > 安装[`RVM`](http://rvm.io/rvm/install)可参考官网:http://rvm.io/rvm/install
 
 3. 通过`rubygems`安装`Jekyll`和`Bundler`，参考上面的`Ubuntu`的安装说明
