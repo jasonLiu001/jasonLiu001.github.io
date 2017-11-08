@@ -1,10 +1,12 @@
-Jekyll环境开发环境搭建
+Jekyll开发`GitHub Pages`环境搭建简介
 =====
+
 ### 前提条件
 1. `Linux`主机一台或虚拟机一台
 2. `Linux`上安装了GCC和Make(通过gcc -v和make -v来检查是否已经安装)
 
 ### 环境搭建
+
 #### Ubuntu
 1. 安装`Ruby`
 
@@ -66,11 +68,12 @@ rvm use 2.1 --default
 ```
 > 安装[`RVM`](http://rvm.io/rvm/install)可参考官网:http://rvm.io/rvm/install
 
-3. 通过`rubygems`安装`Jekyll`和`Bundler`，参考上面的`Ubuntu`的安装说明
-4. 在当前目录下创建网站，参考上面的`Ubuntu`
-5. 网站编译，参考上面的`Ubuntu`
+3. 通过`rubygems`安装`Jekyll`和`Bundler`，参考上面的`Ubuntu`的环境搭建
+4. 在当前目录下创建网站，参考上面的`Ubuntu`环境搭建
+5. 网站编译，参考上面的`Ubuntu`环境搭建
 
 ### 安装`GitHub Pages`相关的`gem`包
+这个是区别你在本地编译通过的网站，在`GitHub Pages`上也同样能正常显示，所以你需要在本地配置一个类似于`GitHub Pages`的环境
 1. 在`Gemfile`文件中添加
 
 ```shell
