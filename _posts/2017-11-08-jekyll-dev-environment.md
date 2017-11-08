@@ -69,3 +69,18 @@ rvm use 2.1 --default
 3. 通过`rubygems`安装`Jekyll`和`Bundler`，参考上面的`Ubuntu`的安装说明
 4. 在当前目录下创建网站，参考上面的`Ubuntu`
 5. 网站编译，参考上面的`Ubuntu`
+
+### 安装`GitHub Pages`相关的`gem`包
+1. 在`Gemfile`文件中添加
+
+```shell
+gem "github-pages", group: :jekyll_plugins
+```
+
+2. 安装`Github Page`相关的`gem`包
+
+```shell
+##Gemfile文件发生变化时，需要运行的命令，如果不清楚，可以用`npm install`来类比其功能
+bundle update
+```
+
