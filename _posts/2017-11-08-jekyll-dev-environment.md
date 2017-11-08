@@ -73,7 +73,7 @@ rvm use 2.1 --default
 5. 网站编译，参考上面的`Ubuntu`环境搭建
 
 ### 安装`GitHub Pages`相关的`gem`包
-这个是区别你在本地编译通过的网站，在`GitHub Pages`上也同样能正常显示，所以你需要在本地配置一个类似于`GitHub Pages`的环境
+这个是确保你在本地编译通过的网站，在`GitHub Pages`上也同样能正常显示，所以你需要在本地配置一个类似于`GitHub Pages`的环境
 1. 在`Gemfile`文件中添加
 
 ```shell
