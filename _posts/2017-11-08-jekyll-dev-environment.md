@@ -1,4 +1,4 @@
-Jekyll开发`GitHub Pages`环境搭建简介
+Jekyll开发GitHub Pages环境搭建简介
 =====
 
 ### 前提条件
