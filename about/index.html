@@ -1,5 +1,10 @@
 ---
 layout: default
+title:  "关于Jason"
 ---
 
-关于页建设中
+<div id="title">
+    <h1>{{ site.title | default: site.github.repository_name }}</h1>
+    <p>{{ site.description | default: site.github.project_tagline }}</p>
+    <hr>
+</div>
