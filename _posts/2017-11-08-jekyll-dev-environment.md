@@ -1,3 +1,9 @@
+---
+layout: default
+title: "Jekyll开发GitHub Pages环境搭建简介"
+tags:
+---
+
 Jekyll开发GitHub Pages环境搭建简介
 =====
 

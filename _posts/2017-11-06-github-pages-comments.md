@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "github-pages-comments"
 github_comments_issueid: "1"
 tags:
