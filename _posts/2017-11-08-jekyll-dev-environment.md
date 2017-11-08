@@ -7,10 +7,12 @@ Jekyll环境开发环境搭建
 ### 环境搭建
 #### Ubunt
 1. 安装`Ruby`
+
 ```shell
 sudo apt-get install ruby-full
 ```
 2. 通过`rubygems`安装`Jekyll`和`Bundler`
+
 ```shell
 gem install jekyll bundler
 ```
@@ -19,11 +21,13 @@ gem install jekyll bundler
 > and that you have all necessary dependencies each gem requires.
 
 3. 在当前目录下创建网站
+
 ```shell
 jekyll new .
 ```
 
 4. 网站编译
+
 ```shell
 #使用bundle exec可以使用Gemfile.lock中指定的gems的版本来编译网站，能最大兼容并且有效的减少依赖冲突
 #当然你也可以直接使用`jekyll build`来编译网站，但是有的时候可能出现包不兼容问题
@@ -32,11 +36,13 @@ bundle exec jekyll build
 
 #### CentOS
 1. 安装`Ruby`
+
 ```shell
 sudo yum install ruby
 ##通过yum安装的ruby版本太旧，此时需要安装rvm来安装其他的ruby版本
 ```
-2. [可选]通过`rvm`来安装`ruby`
+2. [可选]通过`rvm`来安装`ruby`  
+
 ```shell
 
 ##导入gpg
@@ -57,7 +63,7 @@ rvm use 2.1
 ##通过rvm设置系统级的特定版本ruby
 rvm use 2.1 --default   
 
-````
+```
 > 安装[`RVM`](http://rvm.io/rvm/install)可参考官网:http://rvm.io/rvm/install
 
 3. 通过`rubygems`安装`Jekyll`和`Bundler`，参考上面的`Ubuntu`的安装说明
