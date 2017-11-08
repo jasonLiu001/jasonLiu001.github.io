@@ -24,6 +24,10 @@ github_username:  jasonLiu001
 # Set this to a github repository to be used to host comments.
 github_comments_repository:  jasonLiu001/github-pages-comments
 
+# 文章分页设置
+paginate: 1
+paginate_path: "/page:num/"
+
 # show download buttons.
 show_downloads: true
 # Build settings
@@ -31,6 +35,7 @@ markdown: kramdown
 theme: jekyll-theme-midnight
 plugins:
   - jekyll-sitemap
+  - jekyll-paginate
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
