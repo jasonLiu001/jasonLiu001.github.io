@@ -54,7 +54,7 @@ rvm install 2.1
 rvm use 2.1
 
 ##通过rvm设置系统级的特定版本ruby
-rvm use 2.1 --default
+rvm use 2.1 --default   
 ```
 > 安装[`RVM`](http://rvm.io/rvm/install)可参考官网:http://rvm.io/rvm/install
 
