@@ -43,7 +43,7 @@ firewall-cmd --zone=public --add-port=80/tcp --permanent
 
 ```shell
 ##删除后需要运行：firewall-cmd --reload 才会生效
-firewall-cmd --zone= public --remove-port=80/tcp --permanent
+firewall-cmd --zone=public --remove-port=80/tcp --permanent
 ```
 
 ### 查询操作
@@ -57,7 +57,7 @@ firewall-cmd --list-all-zones
 2. 查看特定端口状态
 
 ```shell
-firewall-cmd --zone= public --query-port=80/tcp
+firewall-cmd --zone=public --query-port=80/tcp
 ```
 
 3. 查看防火墙运行状态
