@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Jekyll网站添加评论功能"
 github_comments_issueid: "1"
 tags:
