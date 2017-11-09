@@ -25,14 +25,15 @@ github_username:  jasonLiu001
 github_comments_repository:  jasonLiu001/github-pages-comments
 
 # 文章分页设置
-paginate: 2
+paginate: 10
 paginate_path: "/post/page:num/"
 
 # show download buttons.
-show_downloads: true
+#show_downloads: true
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-midnight
+#theme: jekyll-theme-midnight
+theme: minima
 plugins:
   - jekyll-sitemap
   - jekyll-paginate
