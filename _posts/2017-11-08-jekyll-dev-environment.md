@@ -14,13 +14,13 @@ Jekyll开发GitHub Pages环境搭建简介
 ### 环境搭建
 
 #### Ubuntu
-1. 安装`Ruby`
++ 安装`Ruby`
 
 ```shell
 sudo apt-get install ruby-full
 ```
 
-2. 通过`rubygems`安装`Jekyll`和`Bundler`
++ 通过`rubygems`安装`Jekyll`和`Bundler`
 
 ```shell
 gem install jekyll bundler
@@ -29,13 +29,13 @@ gem install jekyll bundler
 > `bundler`是什么？  
 > bundler is a gem that manages other Ruby gems. It makes sure your gems and gem versions are compatible, and that you have all necessary dependencies each gem requires.
 
-3. 在当前目录下创建网站
++ 在当前目录下创建网站
 
 ```shell
 jekyll new .
 ```
 
-4. 网站编译
++ 网站编译
 
 ```shell
 #使用bundle exec可以使用Gemfile.lock中指定的gems的版本来编译网站，能最大兼容并且有效的减少依赖冲突
@@ -44,14 +44,14 @@ bundle exec jekyll build
 ```
 
 #### CentOS
-1. 安装`Ruby`
++ 安装`Ruby`
 
 ```shell
 sudo yum install ruby
 ##通过yum安装的ruby版本太旧，此时需要安装rvm来安装其他的ruby版本
 ```
 
-2. [可选]通过`rvm`来安装`ruby`  
++ [可选]通过`rvm`来安装`ruby`  
 
 ```shell
 ##导入gpg
@@ -74,19 +74,19 @@ rvm use 2.1 --default
 ```
 > 安装[`RVM`](http://rvm.io/rvm/install)可参考官网:http://rvm.io/rvm/install
 
-3. 通过`rubygems`安装`Jekyll`和`Bundler`，参考上面的`Ubuntu`的环境搭建
-4. 在当前目录下创建网站，参考上面的`Ubuntu`环境搭建
-5. 网站编译，参考上面的`Ubuntu`环境搭建
++ 通过`rubygems`安装`Jekyll`和`Bundler`，参考上面的`Ubuntu`的环境搭建
++ 在当前目录下创建网站，参考上面的`Ubuntu`环境搭建
++ 网站编译，参考上面的`Ubuntu`环境搭建
 
 ### 安装`GitHub Pages`相关的`gem`包
 这个是确保你在本地编译通过的网站，在`GitHub Pages`上也同样能正常显示，所以你需要在本地配置一个类似于`GitHub Pages`的环境
-1. 在`Gemfile`文件中添加
++ 在`Gemfile`文件中添加
 
 ```shell
 gem "github-pages", group: :jekyll_plugins
 ```
 
-2. 安装`Github Page`相关的`gem`包
++ 安装`Github Page`相关的`gem`包
 
 ```shell
 ##Gemfile文件发生变化时，需要运行的命令，如果不清楚，可以用`npm install`来类比其功能
