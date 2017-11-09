@@ -28,10 +28,6 @@ github_comments_repository:  jasonLiu001/github-pages-comments
 paginate: 10
 paginate_path: "/page:num/"
 
-# show download buttons.
-# show_downloads: true
-# Build settings
-markdown: kramdown
 #theme: jekyll-theme-midnight
 theme: minima
 plugins:
