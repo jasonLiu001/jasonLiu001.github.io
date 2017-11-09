@@ -8,13 +8,13 @@ CentOS 7 Firewall防火墙基本使用
 ====
 
 ### `firewall`基本使用
-1. 启动
++ 启动
 
 ```shell
 systemctl start firewalld
 ```
 
-2. 添加新规则后，重新加载配置文件
++ 添加新规则后，重新加载配置文件
  
 ```shell
 firewall-cmd --reload
