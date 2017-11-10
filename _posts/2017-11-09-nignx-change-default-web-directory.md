@@ -29,6 +29,8 @@ sudo chcon -R -t httpd_sys_content_t /你自己的网站目录/
 如果输出`Enforcing`表示安全防护中。如果你只是开发环境，你大可以直接关闭`selinux`，
 通过执行 `setenforce Permissive` 命令，使`selinux`保持宽容状态。如果是正式生产环境不建议这么做，还是老实的通过`chcon`命令来修改安全上下文吧，`SELinux`安全上下文格式：`user:role:type:level`，下面列出了简单的使用和配置
 
+### `SELiunx`常用查询及操作命令简介
+
 + 查看`SELinux`状态
 
 ```shell
@@ -98,8 +100,7 @@ chcon -t usr_t /usr/sbin/httpd
 ```shell
 ~]# restorecon -v /usr/sbin/httpd
 restorecon reset /usr/sbin/httpd context system_u:object_r:unconfined_exec_t:s0->system_u:object_r:httpd_exec_t:s0
-```
-    
+```    
 
 关于`SELinux`的相关参考文档：
 1. [SELinux深入理解](http://blog.csdn.net/myarrow/article/details/9856095/)
