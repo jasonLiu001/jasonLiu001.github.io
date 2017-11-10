@@ -55,16 +55,6 @@ root                      unconfined_u              s0-s0:c0.c1023
 system_u                  system_u                  s0-s0:c0.c1023
 ```
 
-+ `SELinux`用户的作用范围表
-   | User     | Role     | Domain   | X Window System | su or sudo         | Execute in home directory and /tmp/ (default) | Networking   |
-   | -------- | -------- | -------- | --------------- | ------------------ | ---------------------------------------- | ------------ |
-   | sysadm_u | sysadm_r | sysadm_t | yes             | **su**and **sudo** | yes                                      | yes          |
-   | staff_u  | staff_r  | staff_t  | yes             | only **sudo**      | yes                                      | yes          |
-   | user_u   | user_r   | user_t   | yes             | no                 | yes                                      | yes          |
-   | guest_u  | guest_r  | guest_t  | no              | no                 | no                                       | no           |
-   | xguest_u | xguest_r | xguest_t | yes             | no                 | no                                       | Firefox only |
-
-
 + 通过`ls -Z 文件名/目录`来查看文件或者目录的`SELinux`上下文
 
     ```shell
