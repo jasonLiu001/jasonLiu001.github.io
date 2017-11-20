@@ -62,3 +62,6 @@ sudo mount -t vboxsf {第1步中设置的共享目录名称} ~/share
 ```
 
 共享目录设置完成，可以把自己的文件拷贝到相应的目录下，并在虚拟机(centos)中正常访问了!!
+
+> 参考链接
+> 1. [ VirtualBox/SharedFolders](https://help.ubuntu.com/community/VirtualBox/SharedFolders)
