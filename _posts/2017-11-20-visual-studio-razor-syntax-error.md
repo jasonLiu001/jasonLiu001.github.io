@@ -45,7 +45,7 @@ The name 'ViewBag' does not exist in the current context - Visual Studio 2015
   <add key="webpages:Enabled" value="false"/>
 ```
 
-##### 修改`Views`目录下的`Web.config`中的相关`MVC`节点，版本号和项目中引用的`MVC`版本号保持一致
+##### 3. 修改`Views`目录下的`Web.config`中的相关`MVC`节点，版本号和项目中引用的`MVC`版本号保持一致
 
 *修改前*
 ```xml
@@ -125,7 +125,7 @@ The name 'ViewBag' does not exist in the current context - Visual Studio 2015
   </system.web>
 ```
 
-##### （可选）清空`C:\Users\你的用户名\AppData\Local\Microsoft\VisualStudio\14.0\ComponentModelCache`下的所有文件
+##### 4. （可选）清空`C:\Users\你的用户名\AppData\Local\Microsoft\VisualStudio\14.0\ComponentModelCache`下的所有文件
 
 文件包括
 ```text
@@ -136,7 +136,7 @@ The name 'ViewBag' does not exist in the current context - Visual Studio 2015
 
 ```
 
-##### 重启`Visual Studio 2015`
+##### 5. 重启`Visual Studio 2015`
 至此，讨厌的错误提示顺利被消除了。
 
 > 参考链接
