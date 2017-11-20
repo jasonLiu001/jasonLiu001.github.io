@@ -61,6 +61,9 @@ Installing graphics libraries and desktop services components[  确定  ]
 sudo mount -t vboxsf {第1步中设置的共享目录名称} ~/share  
 ```
 
+#### 5. 设置虚拟机(centos)中的share目录selinux安全上下文
+
+
 共享目录设置完成，可以把自己的文件拷贝到相应的目录下，并在虚拟机(centos)中正常访问了!!
 
 > 参考链接
