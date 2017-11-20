@@ -13,7 +13,7 @@ The name 'ViewBag' does not exist in the current context - Visual Studio 2015
 
 ## 解决步骤
 
-##### 修改`Views`目录下的`Web.config`文件，程序集`System.Web.WebPages.Razor`的版本需要和项目中引用的版本保持一致，下面的3.0.0.0版本和`MVC`的5.2.3.0版本对应
+##### 1. 修改`Views`目录下的`Web.config`文件，程序集`System.Web.WebPages.Razor`的版本需要和项目中引用的版本保持一致，下面的3.0.0.0版本和`MVC`的5.2.3.0版本对应
 
 *修改前*
 ```xml
@@ -31,7 +31,7 @@ The name 'ViewBag' does not exist in the current context - Visual Studio 2015
     </sectionGroup>
 ```
 
-##### 修改`appSettings.config`中的`webpages`版本
+##### 2. 修改`appSettings.config`中的`webpages`版本
 
 *修改前*
 ```xml
