@@ -62,7 +62,10 @@ sudo mount -t vboxsf {第1步中设置的共享目录名称} ~/share
 ```
 
 #### 5. 设置虚拟机(centos)中的share目录selinux安全上下文
-
+暂时关闭selinux，启用selinux时，访问总是提示权限问题，尝试改变安全上下文失败，尝试[安装audit2allow](https://github.com/cronkeep/cronkeep/wiki/Developer-Guide)来解决也失败，最后无奈只能暂时关闭selinux来解决
+```shell
+[liu@manager1 ~]$ sudo setenforce 0
+```
 
 共享目录设置完成，可以把自己的文件拷贝到相应的目录下，并在虚拟机(centos)中正常访问了!!
 
