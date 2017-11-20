@@ -109,7 +109,7 @@ firewall-cmd --zone=public --query-port=80/tcp
 
 + 使用`telnet`检测80端口时，提示：`Unable to connect to remote host: Connection refused`
 
-`CentOS`的`SELinux`防护设置问题，需要通过以上命令，改变`nginx`网站目录的安装执行上下文，如上面提到的[修改自定义网站目录的对应的SELinux上下文类型](#修改自定义网站目录的对应的SELinux上下文类型)
+`CentOS`的`SELinux`防护设置问题，需要通过以上命令，改变`nginx`网站目录的安装执行上下文，如上面提到的[修改自定义网站目录的对应的SELinux上下文类型](#2. 修改自定义网站目录的对应的SELinux上下文类型)
 
 ### `Ubuntu`下改变`Nginx`默认web目录提示权限403问题的解决
  
