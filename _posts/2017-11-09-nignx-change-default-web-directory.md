@@ -8,7 +8,7 @@ centos中改变Nginx默认web目录错误解决
 拒绝访问的原因：SELiunx的安全防护机制阻止了，不同SELinux类型中的进程互相访问时，默认是不允许直接访问的
 解决思路： 查询Nginx默认web目录的SELinux类型，修改自定义目录对应的SELiunx类型，和Nginx默认的web目录SELinux类型保持一致即可
 
-+ 通过`ll -Z /usr/share/nginx`查看原来默认的nignx目录的SELinux上下文类型
+##### 1. 通过`ll -Z /usr/share/nginx`查看原来默认的nignx目录的SELinux上下文类型
 
 ```shell
 [liuwang@manager1 ~]$ ll -Z /usr/share/nginx
@@ -19,7 +19,7 @@ drwxr-xr-x. root root system_u:object_r:usr_t:s0       modules
 上面命令的结果中`httpd_sys_content_t`就是我们需要查找的上下文类型，好了，下面我们把自己的自定义目录和它保持一样的上下文类型就可以了
 通过以下命令来实现
 
-+ 修改自定义网站目录的对应的SELinux上下文类型
+##### 2. 修改自定义网站目录的对应的SELinux上下文类型
 
 ```shell
 sudo chcon -R -t httpd_sys_content_t /你自己的网站目录/
@@ -111,6 +111,6 @@ firewall-cmd --zone=public --query-port=80/tcp
 
 `CentOS`的`SELinux`防护设置问题，需要通过以上命令，改变`nginx`网站目录的安装执行上下文，如上面提到的[修改自定义网站目录的对应的SELinux上下文类型](#修改自定义网站目录的对应的SELinux上下文类型)
 
-+ `Ubuntu`下改变`Nginx`默认web目录提示权限403问题的解决
+### `Ubuntu`下改变`Nginx`默认web目录提示权限403问题的解决
  
 如果你的网站目录是在`/root`目录下的话， 需要在配置文件`/etc/nginx/nginx.conf`中的`user www-data`; 改为 `user root`;如果不想使用root用户运行，就不能把目录放在 /root/ 目录下了，可以选择在 /home/www 下创建目录，并赋予适当的权限，比如:`chmod 755 /home/www`，同样也可正常访问
