@@ -5,9 +5,6 @@ date: 2017-11-08 08:24:13 +0800
 tags:
 ---
 
-Jekyll开发GitHub Pages环境搭建简介
-=====
-
 ### 前提条件
 1. `Linux`主机一台或虚拟机一台
 2. `Linux`上安装了GCC和Make(通过gcc -v和make -v来检查是否已经安装)
