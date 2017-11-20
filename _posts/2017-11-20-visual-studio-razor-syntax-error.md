@@ -41,7 +41,7 @@ The name 'ViewBag' does not exist in the current context - Visual Studio 2015
 
 *更新后*
 ```xml
-  <add key="webpages:Version" value="2.0.0.0"/>
+  <add key="webpages:Version" value="3.0.0.0"/>
   <add key="webpages:Enabled" value="false"/>
 ```
 
@@ -125,14 +125,14 @@ The name 'ViewBag' does not exist in the current context - Visual Studio 2015
   </system.web>
 ```
 
-##### [可选步骤] 清空`C:\Users\你的用户名\AppData\Local\Microsoft\VisualStudio\14.0\ComponentModelCache`下的所有文件
+##### （可选）清空`C:\Users\你的用户名\AppData\Local\Microsoft\VisualStudio\14.0\ComponentModelCache`下的所有文件
 
 文件包括
 ```text
-* Microsoft.VisualStudio.Default.cache
-* Microsoft.VisualStudio.Default.catalogs
-* Microsoft.VisualStudio.Default.err
-* Microsoft.VisualStudio.Default.external
+ Microsoft.VisualStudio.Default.cache
+ Microsoft.VisualStudio.Default.catalogs
+ Microsoft.VisualStudio.Default.err
+ Microsoft.VisualStudio.Default.external
 
 ```
 
