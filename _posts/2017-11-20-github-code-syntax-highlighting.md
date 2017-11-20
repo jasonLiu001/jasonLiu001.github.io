@@ -4,9 +4,6 @@ title:  "github中支持的代码块高亮列表"
 date:   2017-11-20 11:32:30 +0800
 ---
 
-github中支持的代码块高亮列表
-========
-
 > 参考链接
 > [Creating and highlighting code blocks](https://help.github.com/articles/creating-and-highlighting-code-blocks/)
 
