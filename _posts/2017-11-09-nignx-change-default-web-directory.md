@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "centos中改变Nginx默认web目录permission denied(403)"
 date:   2017-11-09 14:22:30 +0800
 ---

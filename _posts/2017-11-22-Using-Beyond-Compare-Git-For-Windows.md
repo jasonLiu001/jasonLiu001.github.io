@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Using Beyond Compare with git for windows"
 date:   2017-11-22 10:39:30 +0800
 ---

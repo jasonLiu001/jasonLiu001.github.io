@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "VirtualBox虚拟机(centos服务器)与windows文件共享设置"
 date:   2017-11-20 15:54:13 +0800
 ---

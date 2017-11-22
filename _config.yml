@@ -17,11 +17,9 @@ title: Jason
 email: ksjifjui@sina.com
 description: >- # this means to ignore newlines until "baseurl:"
   C#、Javascript developer comes from China.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  jasonLiu001
 
-# Set this to a github repository to be used to host comments.
+# 保存所有评论的github库
 github_comments_repository:  jasonLiu001/github-pages-comments
 
 # 文章分页设置
@@ -37,6 +35,16 @@ plugins:
 #sass
 sass:
   sass_dir: _sass
+
+# 设置所有文章的默认布局等信息
+defaults:
+  -
+     scope:
+      path: ""
+      type: "posts"
+     values:
+      layout: "post"
+      author: "Jason Liu"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

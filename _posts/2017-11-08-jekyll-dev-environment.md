@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Jekyll开发GitHub Pages环境搭建简介"
 date: 2017-11-08 08:24:13 +0800
 ---

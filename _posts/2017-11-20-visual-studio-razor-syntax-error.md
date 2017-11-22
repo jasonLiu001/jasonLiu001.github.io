@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "visual studio 2015 razor视图提示：当前上下文不存在`ViewBag`"
 date:   2017-11-20 11:12:30 +0800
 ---
