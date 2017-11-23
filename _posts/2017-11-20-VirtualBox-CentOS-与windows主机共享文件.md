@@ -30,7 +30,27 @@ mount –o loop VBoxGuestAdditions.iso /mnt/iso1
 cd /mnt/iso1/
 sudo ./VBoxLinuxAdditions.run
 ```
-安装结果如下：
+如果提示安装失败，按照下面步骤解决
+```shell
+# 查看具体的错误提示
+cat /var/log/vboxadd-install.log | less
+# 安装更新
+sudo yum update
+# 查看当前已经安装的所有内核
+rpm -qa | grep kernel | sort
+# 查看当前使用的内核
+uname -r
+# 安装kernel-devel和gcc,和当前内核版本匹配的devel
+yum install kernel-devel-$(uname -r) gcc
+# 设置内核版本环境变量
+export KERN_DIR=/usr/src/kernels/$(uname -r) >> ~/.bashrc
+# 检查设置的内核版本环境变量值是否正确
+echo $KERN_DIR
+# 再次执行安装增强工具
+./VBoxLinuxAdditions.run
+```
+
+正常安装结果如下：
 ```shell
 [liu@worker1 iso1]$ sudo ./VBoxLinuxAdditions.run 
 Verifying archive integrity... All good.
