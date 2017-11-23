@@ -30,7 +30,7 @@ mount –o loop VBoxGuestAdditions.iso /mnt/iso1
 cd /mnt/iso1/
 sudo ./VBoxLinuxAdditions.run
 ```
-如果安装失败，按照下面步骤解决
+如果安装失败，按照下面步骤解决,如果下面步骤不能解决，考虑是Virtualbox的版本问题，可以更换版本试试，获取更改gcc的版本尝试
 ```shell
 # 查看具体的错误提示
 cat /var/log/vboxadd-install.log | less
@@ -49,6 +49,7 @@ export MAKE='/usr/bin/gmake -i'
 echo $KERN_DIR
 yum install elfutils-libelf-devel dkms kernel-devel-$(uname -r)
 yum erase kernel-debug-devel-$(uname -r)
+cd /usr/src/kernels/$(uname -r)
 make oldconfig && make prepare
 # 再次执行安装增强工具
 ./VBoxLinuxAdditions.run
