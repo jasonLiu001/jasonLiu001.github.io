@@ -30,7 +30,17 @@ mount –o loop VBoxGuestAdditions.iso /mnt/iso1
 cd /mnt/iso1/
 sudo ./VBoxLinuxAdditions.run
 ```
-如果安装失败，按照下面步骤解决,如果下面步骤不能解决，考虑是Virtualbox的版本问题，可以更换版本试试，获取更改gcc的版本尝试
+如果安装失败，按照下面步骤解决,如果下面步骤不能解决，考虑是VBoxLinuxAdditions.ios增强工具的版本问题，可以更换版本试试。我的就是通过降级版本成功的，原来是`5.1.20`更改为`5.0.10`就能正常安装了。下面是我降级安装的部分提示
+```shell
+./VBoxLinuxAdditions.run
+Verifying archive integrity... All good.
+Uncompressing VirtualBox 5.0.10 Guest Additions for Linux............  ## 安装低版本
+VirtualBox Guest Additions installer
+Removing installed version 5.1.20 of VirtualBox Guest Additions...  ##这里卸载了之前安装的高版本
+......后面省略
+......
+```
+下面是使用`5.1.20`版本时，尝试的安装失败解决方案，可惜都是失败，还怀疑是gcc版本问题，结果竟然是virtualbox增强工具的版本问题，真是大坑
 ```shell
 # 查看具体的错误提示
 cat /var/log/vboxadd-install.log | less
