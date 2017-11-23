@@ -13,6 +13,9 @@ C:\Program Files\Oracle\VirtualBox
 ```
 上传目录中的`VBoxGuestAdditions.iso`文件到虚拟机(centos)中，可以通过rz命令来完成
 ```shell
+# 安装rz,sz
+yum install lrzsz
+# 上传本地文件到虚拟机
 rz -ary --o-sync
 ```
 执行rz命令后会弹出浏览对话框，选择`VBoxGuestAdditions.iso`后确定，自动执行上传操作
