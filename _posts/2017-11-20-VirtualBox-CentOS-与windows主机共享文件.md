@@ -30,7 +30,7 @@ mount –o loop VBoxGuestAdditions.iso /mnt/iso1
 cd /mnt/iso1/
 sudo ./VBoxLinuxAdditions.run
 ```
-如果提示安装失败，按照下面步骤解决
+如果安装失败，按照下面步骤解决
 ```shell
 # 查看具体的错误提示
 cat /var/log/vboxadd-install.log | less
