@@ -33,8 +33,8 @@ plugins:
   - jekyll-paginate
 
 # 设置sass样式目录
-#sass:
-#  sass_dir: _sass
+sass:
+  sass_dir: _sass
 
 # 设置所有文章的默认布局等信息
 defaults:
