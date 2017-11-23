@@ -46,6 +46,9 @@ yum install kernel-devel-$(uname -r) gcc
 export KERN_DIR=/usr/src/kernels/$(uname -r) >> ~/.bashrc
 # 检查设置的内核版本环境变量值是否正确
 echo $KERN_DIR
+yum install elfutils-libelf-devel dkms kernel-devel-$(uname -r)
+yum erase kernel-debug-devel-$(uname -r)
+make oldconfig && make prepare
 # 再次执行安装增强工具
 ./VBoxLinuxAdditions.run
 ```
