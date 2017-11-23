@@ -44,6 +44,7 @@ uname -r
 yum install kernel-devel-$(uname -r) gcc
 # 设置内核版本环境变量
 export KERN_DIR=/usr/src/kernels/$(uname -r) >> ~/.bashrc
+export MAKE='/usr/bin/gmake -i'
 # 检查设置的内核版本环境变量值是否正确
 echo $KERN_DIR
 yum install elfutils-libelf-devel dkms kernel-devel-$(uname -r)
