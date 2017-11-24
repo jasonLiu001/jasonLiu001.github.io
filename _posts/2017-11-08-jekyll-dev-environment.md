@@ -89,3 +89,7 @@ gem "github-pages", group: :jekyll_plugins
 bundle update
 ```
 
+### 参考文档
+在`GitHub Pages`上支持的`Jekyll plugins`插件列表
+1. [Adding Jekyll plugins to a GitHub Pages site](https://help.github.com/articles/adding-jekyll-plugins-to-a-github-pages-site/)
+
