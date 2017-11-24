@@ -2,9 +2,5 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-// import custom theme sass
-// 这里面包含bootstrap样式，不需要重复导入
-@import "custom";
-
 // import minima theme sass.
 @import "minima";

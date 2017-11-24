@@ -34,8 +34,8 @@ plugins:
   - jekyll-seo-tag
 
 # 设置sass样式目录
-sass:
-  sass_dir: _sass
+#sass:
+#  sass_dir: _sass
 
 # markdown引擎
 markdown: kramdown
