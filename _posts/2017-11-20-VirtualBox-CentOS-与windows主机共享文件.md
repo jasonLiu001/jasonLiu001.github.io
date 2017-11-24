@@ -13,6 +13,9 @@ C:\Program Files\Oracle\VirtualBox
 ```
 上传目录中的`VBoxGuestAdditions.iso`文件到虚拟机(centos)中，可以通过rz命令来完成
 ```shell
+# 安装rz,sz
+yum install lrzsz
+# 上传本地文件到虚拟机
 rz -ary --o-sync
 ```
 执行rz命令后会弹出浏览对话框，选择`VBoxGuestAdditions.iso`后确定，自动执行上传操作
@@ -27,7 +30,42 @@ mount –o loop VBoxGuestAdditions.iso /mnt/iso1
 cd /mnt/iso1/
 sudo ./VBoxLinuxAdditions.run
 ```
-安装结果如下：
+如果安装失败，按照下面步骤解决,如果下面步骤不能解决，考虑是VBoxLinuxAdditions.ios增强工具的版本问题，可以更换版本试试。我的就是通过降级版本成功的，原来是`5.1.20`更改为`5.0.10`就能正常安装了。下面是我降级安装的部分提示
+```shell
+./VBoxLinuxAdditions.run
+Verifying archive integrity... All good.
+Uncompressing VirtualBox 5.0.10 Guest Additions for Linux............  ## 安装低版本
+VirtualBox Guest Additions installer
+Removing installed version 5.1.20 of VirtualBox Guest Additions...  ##这里卸载了之前安装的高版本
+......后面省略
+......
+```
+下面是使用`5.1.20`版本时，尝试的安装失败解决方案，可惜都是失败，还怀疑是gcc版本问题，结果竟然是virtualbox增强工具的版本问题，真是大坑
+```shell
+# 查看具体的错误提示
+cat /var/log/vboxadd-install.log | less
+# 安装更新
+sudo yum update
+# 查看当前已经安装的所有内核
+rpm -qa | grep kernel | sort
+# 查看当前使用的内核
+uname -r
+# 安装kernel-devel和gcc,和当前内核版本匹配的devel
+yum install kernel-devel-$(uname -r) gcc
+# 设置内核版本环境变量
+export KERN_DIR=/usr/src/kernels/$(uname -r) >> ~/.bashrc
+export MAKE='/usr/bin/gmake -i'
+# 检查设置的内核版本环境变量值是否正确
+echo $KERN_DIR
+yum install elfutils-libelf-devel dkms kernel-devel-$(uname -r)
+yum erase kernel-debug-devel-$(uname -r)
+cd /usr/src/kernels/$(uname -r)
+make oldconfig && make prepare
+# 再次执行安装增强工具
+./VBoxLinuxAdditions.run
+```
+
+正常安装结果如下：
 ```shell
 [liu@worker1 iso1]$ sudo ./VBoxLinuxAdditions.run 
 Verifying archive integrity... All good.

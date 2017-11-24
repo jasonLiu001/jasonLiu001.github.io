@@ -53,8 +53,8 @@ sudo yum install ruby
 ##导入gpg
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 
-##安装rmv
-curl -sSL https://get.rvm.io | bash -s stable
+##安装rmv 安装完成后需要退出登录，再重新登录CentOS
+curl -sSL https://get.rvm.io | bash -s stable 
 
 ##显示可安装的所有ruby版本
 rvm list known
