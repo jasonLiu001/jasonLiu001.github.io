@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ site.lang | default: " en-US" }}">
+<html lang="{{ site.lang | default: "zh" }}">
 
 {% include head.html %}
 
@@ -7,70 +7,13 @@
 
 {% include header.html %}
 
-<div class="py-5 px-1">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-2">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="card">
-                            <div class="card-header">
-                                Header
-                            </div>
-                            <div class="card-body">
-                                <h4>Card title</h4>
-                                <h6 class="text-muted">Subtitle</h6>
-                                <p class=" p-y-1">Some quick example text to build on the card title .</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row py-2">
-                    <div class="col-md-12">
-                        <div class="card">
-                            <div class="card-header">
-                                Header
-                            </div>
-                            <div class="card-body">
-                                <h4>Card title</h4>
-                                <h6 class="text-muted">Subtitle</h6>
-                                <p class=" p-y-1">Some quick example text to build on the card title .</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row py-2">
-                    <div class="col-md-12">
-                        <div class="card">
-                            <div class="card-header">
-                                Header
-                            </div>
-                            <div class="card-body">
-                                <h4>Card title</h4>
-                                <h6 class="text-muted">Subtitle</h6>
-                                <p class=" p-y-1">Some quick example text to build on the card title .</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row py-2">
-                    <div class="col-md-12">
-                        <div class="card">
-                            <div class="card-header">
-                                Header
-                            </div>
-                            <div class="card-body">
-                                <h4>Card title</h4>
-                                <h6 class="text-muted">Subtitle</h6>
-                                <p class=" p-y-1">Some quick example text to build on the card title .</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-10">
-                {{ content }}
-            </div>
+<div class="py-3 container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+            {% include widget.html %}
+        </div>
+        <div class="col-md-10">
+            {{ content }}
         </div>
     </div>
 </div>

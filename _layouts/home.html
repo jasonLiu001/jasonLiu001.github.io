@@ -3,25 +3,31 @@ layout: default
 title:  "Jason的所有文章"
 ---
 
-<div class="home">
+<div class="row">
+    <div class="col-md-12">
+        {{ content }}
 
-    {{ content }}
+        <div class="card">
+            <div class="card-header">
+                文章列表 共{{ paginator.total_posts }}篇
+            </div>
+            <div class="card-body">
+                <ul class="post-list">
+                    {% for post in paginator.posts %}
+                    <li>
+                        {% assign date_format = site.minima.date_format | default: "%Y-%m-%d" %}
+                        <span class="post-meta">{{ post.date | date: date_format }}</span>
 
-    <h1 class="page-heading">所有文章</h1>
-
-    <ul class="post-list">
-        {% for post in paginator.posts %}
-        <li>
-            {% assign date_format = site.minima.date_format | default: "%Y-%m-%d" %}
-            <span class="post-meta">{{ post.date | date: date_format }}</span>
-
-            <h2>
-                <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-            </h2>
-        </li>
-        {% endfor %}
-    </ul>
-
+                        <h2>
+                            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                        </h2>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <p class=" p-y-1">Some quick example text to build on the card title .</p>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!--文章分页-->
