@@ -4,7 +4,8 @@ date: 2017-11-26 17:07:26 +0800
 ---
 
 + 更改本机Power Shell默认的执行策略
-```powershell
+
+```shell
 #获取影响当前会话的所有执行策略，并按优先顺序显示它们
  Get-ExecutionPolicy -List
  
