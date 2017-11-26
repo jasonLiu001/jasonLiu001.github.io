@@ -24,10 +24,16 @@ title:  "Jason的所有文章"
                     </li>
                     {% endfor %}
                 </ul>
+
+                <div class="row">
+                    <div class="col-md-12 d-flex justify-content-center">
+                        <!--文章分页-->
+                        {% include pagination.html %}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-<!--文章分页-->
-{% include pagination.html %}
+
