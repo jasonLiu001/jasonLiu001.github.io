@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ site.lang | default: "zh" }}">
+<html lang='{{ site.lang | default: "zh" }}'>
 
 {% include head.html %}
 
@@ -7,12 +7,12 @@
 
 {% include header.html %}
 
-<div class="py-3 container-fluid">
+<div class="pt-3 container-fluid">
     <div class="row">
-        <div class="col-md-10">
+        <div class="col-md-10 pb-2">
             {{ content }}
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2 pb-2">
             {% include widget.html %}
         </div>
     </div>

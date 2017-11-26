@@ -1,20 +1,24 @@
 {% if page.github_comments_issueid and site.github_comments_repository %}
 
-<div id="gh-comments">
-    <br/><br/>
-    <h6>COMMENTS</h6>
-    <div id="gh-comments-list"></div>
+<div class="row">
+    <div class="col-12">
+        <div id="gh-comments">
+            <br/><br/>
+            <h6><strong>发表评论</strong></h6>
+            <div id="gh-comments-list"></div>
+        </div>
+
+        <script src="{{'/assets/js/github-comments.js' | relative_url }}"></script>
+
+        <script type="text/javascript">
+            DoGithubComments(
+                "{{ site.github_comments_repository }}",
+                "{{ page.github_comments_issueid }}"
+            );
+        </script>
+
+        <noscript>Please enable JavaScript to view comments.</noscript>
+    </div>
 </div>
-
-<script src="{{'/assets/js/github-comments.js' | relative_url }}"></script>
-
-<script type="text/javascript">
-    DoGithubComments(
-        "{{ site.github_comments_repository }}",
-        "{{ page.github_comments_issueid }}"
-    );
-</script>
-
-<noscript>Please enable JavaScript to view comments.</noscript>
 
 {% endif %}
