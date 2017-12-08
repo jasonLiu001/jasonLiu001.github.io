@@ -7,7 +7,7 @@ date: 2017-12-07 11:08:00 +0800
 
 #### 通过react-native-cli来创建及运行项目（命令行cli方式）
 
-不要按照QuickStart中配置，按照`Build Project with Native Code`里面的说明来配置环境，使用QuickStart中没有成功，使用`Build Project with Native Code`成功了
+尽量不要按照`QuickStart`中配置，按照`Build Project with Native Code`里面的说明来配置环境，使用`QuickStart`中没有成功，使用`Build Project with Native Code`成功了
 
 ```shell
 # 安装cli
@@ -27,7 +27,7 @@ react-native run-android
 
 2. 启动android模拟器
 
-3. 通过xde创建新项目
+3. 打开xde，通过菜单`Expo XDE->Install Android App`，安装expo到模拟器，并通过xde创建新项目
 
 4. 修改项目根路径下的`package.json`文件，expo sdk和react-native的版本对应关系，如下图所示的对应关系
 
@@ -88,3 +88,45 @@ react-native run-android
    ```
 
    2. 修改expo sdk和react native的版本对应关系，参照上图的sdk对应关系设置即可
+
+#### 配合react-native的包管理器，最好是都安装
+
+1. [NPM](https://github.com/npm/npm)
+
+2. [Yarn](https://yarnpkg.com/zh-Hans/docs/install#windows-tab)
+
+   react-native安装包的时候会优先选择yarn，不是npm，可以大大缩短下载包的速度
+
+   ```shell
+   npm install --global yarn
+   ```
+
+3. （可选安装项） [windows-build-tools](https://github.com/felixrieseberg/windows-build-tools) 用于编译C++编写的node模块，安装这个工具的同时，会自动安装python
+
+   ```shell
+   npm install --global --production windows-build-tools
+   ```
+
+4. 安装[flow](https://flow.org/en/docs/install/)
+
+   ```shell
+   npm install --save-dev babel-cli babel-preset-flow
+   ```
+
+   ​
+
+#### JSX学习
+
+`jsx`不是字符串也不是html，它可以作为表达式来用，`()`在`jsx` 中没有什么特别的意思，`()`是一个整体的意思，不会守到js的[自动插入分号功能](https://stackoverflow.com/questions/2846283/what-are-the-rules-for-javascripts-automatic-semicolon-insertion-asi)影响
+
+1. 冒号`""`和`{}`不能同时使用，`{}`在jsx是表达式的意思
+2. 命名规则驼峰命名，首字母小写
+3. tag必须有对应的结束标记
+4. `jsx`本身支持`XSS`
+5. DOM和html没有必然的联系，jsx和html类似都是用于描述dom的语言
+6. `jsx`中体现了ES6的特性，在webstorm中对jsx有很好的支持
+   + 在webstorm中如果启用对`jsx`的支持<http://babeljs.io/docs/editors>
+   + ES6对应的几种转换器：Typescript、Traceur、Babel，参考文章<http://2ality.com/2015/04/deploying-es6.html>
+   + 优秀文章，关于如何将ES6编写的脚步转换为ES5，<http://2ality.com/2015/04/deploying-es6.html>
+7. 在.net中也可以使用JSX语法，参照<https://reactjs.net/>。在.net中通过babel提供的api也可以实现将jsx转换为普通的javascript，参考文档<http://babeljs.io/docs/setup/#installation>
+8. ​
