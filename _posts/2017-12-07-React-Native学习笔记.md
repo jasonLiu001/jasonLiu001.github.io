@@ -102,7 +102,9 @@ date: 2017-12-07 11:08:00 +0800
    npm install --global --production windows-build-tools
    ```
 
-4. 安装[flow](https://flow.org/en/docs/install/)
+4. （可选安装）安装[flow](https://flow.org/en/docs/install/)
+
+   如果用的是开发工具时Webstorm，建议安装
 
    ```shell
    npm install --save-dev babel-cli babel-preset-flow
