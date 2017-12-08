@@ -65,6 +65,8 @@ react-native run-android
 
 #### Expo运行React Native问题汇总
 
+通过Expo运行项目时报错，通常是expo sdk的版本和react-native的版本不一致导致，下面列出了两个常见问题
+
 1. Expo运行React Native报错
 
 > 错误信息： Couldn't start project on Android: Error running adb: Error running app. Error: Activity not started, unable to resolve Intent { act=android.intent.action.VIEW dat=exp://localhost:19000 flg=0x10000000 }
@@ -75,7 +77,7 @@ react-native run-android
 
    按照官网的Quick Start新建的项目，在expo中运行，出现了以上错误。
 
-   原因：expo sdk 版本和react native 的版本不一致导致
+   导致原因：`expo sdk` 版本和`react native `的版本不一致导致
 
    解决步骤：
 
