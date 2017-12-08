@@ -5,23 +5,18 @@ date: 2017-12-07 11:08:00 +0800
 
 
 
-#### 通过react-native-cli来创建及运行项目（命令行cli方式）
+#### 【推荐这种方式】通过react-native-cli来创建及运行项目（命令行cli方式）
 
-尽量不要按照`QuickStart`中配置，按照`Build Project with Native Code`里面的说明来配置环境，使用`QuickStart`中没有成功，使用`Build Project with Native Code`成功了
-
-```shell
-# 安装cli
-npm install -g react-native-cli
-# 创建工程
-react-native init AwesomeProject
-# 运行
-cd AwesomeProject
-react-native run-android
-```
+尽量不要按照`QuickStart`中配置，因为`QuickStart`中的例子是用expo的方式来创建的项目，所以在运行时候，可能会遇到expo项目遇到的问题。尽量按照`Build Project with Native Code`里面的说明来配置环境，可以避免自己少走弯路，节约学习时间和成本。
 
 
 
-#### 通过Expo的xde来创建及运行项目
+#### 【Demo项目推荐用，正式项目不推荐】通过Expo的xde来创建及运行项目
+
+> 特别说明：
+>
+> 1. Expo创建的项目在有些场景下不合适，比如需要创建后台进程的应用，无法后台定位，无法使用蓝牙等限制
+> 2. Expo创建的项目最终打包的体积都是比较大的，这个根据自己的项目情况来考虑
 
 1. [安装xde](https://docs.expo.io/versions/latest/introduction/installation.html)
 
@@ -31,7 +26,7 @@ react-native run-android
 
 4. 修改项目根路径下的`package.json`文件，expo sdk和react-native的版本对应关系，如下图所示的对应关系
 
-   ![Expo和React Native的版本对应关系](../assets/img/expo_support.png)
+   ![Expo和React Native的版本对应关系](/assets/img/expo_support.png)
 
    修改expo自动生成的`package.json`文件，保持和上面版本的对应关系，下面是expo自动生成的json文件，需要对应修改有注释的地方
 
@@ -129,4 +124,14 @@ react-native run-android
    + ES6对应的几种转换器：Typescript、Traceur、Babel，参考文章<http://2ality.com/2015/04/deploying-es6.html>
    + 优秀文章，关于如何将ES6编写的脚步转换为ES5，<http://2ality.com/2015/04/deploying-es6.html>
 7. 在.net中也可以使用JSX语法，参照<https://reactjs.net/>。在.net中通过babel提供的api也可以实现将jsx转换为普通的javascript，参考文档<http://babeljs.io/docs/setup/#installation>
-8. ​
+
+
+
+#### React Native App在模拟中的操作
+
+1. Ctrl+M 调出菜单，选择对应的菜单，可以启用实时编译等功能
+
+#### OAT功能使用
+
+待学习
+
