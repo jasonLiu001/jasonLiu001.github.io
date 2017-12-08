@@ -3,7 +3,7 @@ title: "PowerShell 实用技巧整理"
 date: 2017-11-26 17:07:26 +0800
 ---
 
-+ 更改本机**Power Shell**默认的执行策略
+#### 更改本机**Power Shell**默认的执行策略
 
 ```shell
 #获取影响当前会话的所有执行策略，并按优先顺序显示它们
@@ -22,13 +22,78 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 Set-ExecutionPolicy Undefined
 ```
 
-+ 设置断点，调试，继续运行
-    + **F9** 设置断点
-    + **F5** 运行调试
-    + **F5** 继续运行
-    + **Shift-F5** 停止调试（或者在控制台中输入**Q**后，然后按**Enter**键）
-    
+#### 设置断点，调试，继续运行
 
-+ 在**Power Shell**中启动应用程序（多种方式）
++ **F9** 设置断点
++ **F5** 运行调试
++ **F5** 继续运行
++ **Shift-F5** 停止调试（或者在控制台中输入**Q**后，然后按**Enter**键）
+
+####  在**Power Shell**中启动应用程序（多种方式）
+
 > 参考链接
 > [PowerShell: Running Executables](https://social.technet.microsoft.com/wiki/contents/articles/7703.powershell-running-executables.aspx)  
+
+#### 查看及设置环境变量
+
+```powershell
+Get-ChildItem Env: #查看所有的环境变量
+$env:Path  #查看path变量
+$env:TEMP   #查看temp变量
+
+#查看用户级环境变量
+[Environment]::GetEnvironmentVariable("TestVariable","User")
+
+#设置只对当前powershell会话有效的环境变量（当前会话有效）
+$env:TestVariable = "This is a test environment variable."
+#删除临时环境变量
+Remove-Item Env:\TestVariable
+
+
+#设置用户级环境变量（永久有效），设置系统级，把User修改为Machine即可
+[Environment]::SetEnvironmentVariable("TestVariable", "Test value.", "User")
+#删除用户及环境变量(删除后通过Get-ChildItem可能还会显示，需要重启电脑)
+[Environment]::SetEnvironmentVariable("TestVariable",$null,"User")
+```
+
+#### 打开目录
+
+```powershell
+Invoke-Item  目录路径
+#或者用别名ii
+ii 目录路径
+```
+
+#### 分页查看命令帮助`out-host -paging`
+
+```powershell
+#out-host命令分页
+some-cmdlet | out-host -paging
+
+#或者用more命令分页
+some-cmdlet | more
+```
+
+#### powershell 查看别名及设置别名
+
+```powershell
+#查看所有别名
+Get-Alias
+
+#给Get-ChildItem设置别名为list
+PS C:\> Set-Alias -Name list -Value get-childitem
+#或者不带-name和-value参数
+PS C:\> Set-Alias list get-childitem
+
+#还可以为应用程序设置别名
+Set-Alias np c:\windows\notepad.exe
+```
+
+#### 静态成员操作符`::`
+
+可以通过`::`调用`.net`类中的静态成员方法
+
+```powershell
+ [DateTime]::now
+```
+
