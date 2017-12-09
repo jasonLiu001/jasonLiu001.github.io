@@ -3,6 +3,21 @@ title: "React-Native学习笔记"
 date: 2017-12-07 11:08:00 +0800
 ---
 
+使用React Native必须具备的知识储备
+
+1. React（包括jsx）
+2. jsx
+3. javascript、es6语法
+
+能够有助你快速上手并且理解react native的其他知识，非必备知识储备
+
+1. node
+2. npm，yarn
+3. es5
+4. html，DOM
+5. AMD、CMD、CommonJS、UMD
+6. Java、C#、Objective-C
+
 
 
 #### 【推荐这种方式】通过react-native-cli来创建及运行项目（命令行cli方式）
@@ -55,7 +70,6 @@ date: 2017-12-07 11:08:00 +0800
 
 5. 通过expo运行程序
 
-   ​
 
 
 #### Expo运行React Native问题汇总
@@ -126,6 +140,7 @@ date: 2017-12-07 11:08:00 +0800
    + ES6对应的几种转换器：Typescript、Traceur、Babel，参考文章<http://2ality.com/2015/04/deploying-es6.html>
    + 优秀文章，关于如何将ES6编写的脚步转换为ES5，<http://2ality.com/2015/04/deploying-es6.html>
 7. 在.net中也可以使用JSX语法，参照<https://reactjs.net/>。在.net中通过babel提供的api也可以实现将jsx转换为普通的javascript，参考文档<http://babeljs.io/docs/setup/#installation>
+8. jsx和普通模板语言的最大区别，jsx是在js中嵌入xml语言标记，其他都是在语言中嵌入js，比如html中如果使用模板语法，导入js，并且编写js脚本
 
 
 
@@ -137,3 +152,17 @@ date: 2017-12-07 11:08:00 +0800
 
 待学习
 
+#### jsx调试
+
+待学习
+
+#### 集成React Native到已有的原生应用中
+
+待学习
+
+#### React学习
+
+1. 元素是react的最小构成块，在屏幕中能够看到的都属于元素
+2. 组件可看着是js中的方法，返回值是元素
+3. jsx中用户定义的组件的所有属性会被当做一个对象，这个对象就是所说的"props"
+4. 用户定义组件的首字母要大写，与dom中定义的tag区别开来
