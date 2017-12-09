@@ -97,3 +97,37 @@ Set-Alias np c:\windows\notepad.exe
  [DateTime]::now
 ```
 
+#### 设置powershell窗口的标题
+
+```powershell
+#之前cmd时代，设置cmd的标题方法，通过title命令，可以实现
+title 标题
+
+#powershell时代来临，设置powershell的标题方法，如下所示：
+$host.UI.RawUI.WindowTitle = "New Title"
+```
+
+#### [alias在多个powershell中共享设置](https://technet.microsoft.com/en-us/library/ee176913.aspx)
+
+在`powershell`的配置目录，新建文件夹`PSConfiguration`后，新建文件`Microsoft.PowerShell_profile.ps1`，在文件中添加类似下面的别名设置规则
+
+```powershell
+Set-Alias show Get-ChildItem
+```
+
+#### 创建目录或者文件
+
+```powershell
+#创建目录
+New-Item c:\scripts\目录名称 -type directory
+
+#创建文件
+New-Item c:\scripts\new_file.txt -type file
+
+#编辑文件
+notepad 文件名
+
+#删除文件
+Remove-Item 文件名
+```
+
