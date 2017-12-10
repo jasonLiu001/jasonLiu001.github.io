@@ -131,16 +131,41 @@ date: 2017-12-07 11:08:00 +0800
 `jsx`不是字符串也不是html，它可以作为表达式来用，`()`在`jsx` 中没有什么特别的意思，`()`是一个整体的意思，不会守到js的[自动插入分号功能](https://stackoverflow.com/questions/2846283/what-are-the-rules-for-javascripts-automatic-semicolon-insertion-asi)影响
 
 1. 冒号`""`和`{}`不能同时使用，`{}`在jsx是表达式的意思
-2. 命名规则驼峰命名，首字母小写
+
+2. 命名规则驼峰命名，首字母小写，这个和html属性的规则有区别，html属性都是小写的
+
 3. tag必须有对应的结束标记
+
 4. `jsx`本身支持`XSS`
+
 5. DOM和html没有必然的联系，jsx和html类似都是用于描述dom的语言
+
 6. `jsx`中体现了ES6的特性，在webstorm中对jsx有很好的支持
    + 在webstorm中如果启用对`jsx`的支持<http://babeljs.io/docs/editors>
    + ES6对应的几种转换器：Typescript、Traceur、Babel，参考文章<http://2ality.com/2015/04/deploying-es6.html>
    + 优秀文章，关于如何将ES6编写的脚步转换为ES5，<http://2ality.com/2015/04/deploying-es6.html>
+
 7. 在.net中也可以使用JSX语法，参照<https://reactjs.net/>。在.net中通过babel提供的api也可以实现将jsx转换为普通的javascript，参考文档<http://babeljs.io/docs/setup/#installation>
+
 8. jsx和普通模板语言的最大区别，jsx是在js中嵌入xml语言标记，其他都是在语言中嵌入js，比如html中如果使用模板语法，导入js，并且编写js脚本
+
+9. 在子组件中有构造函数时，构造函数中需要调用super方法
+
+10. 设计组件的原则：单责任原则，一个组件负责一件事
+
+11. 最好在代码基础上添加类型检查，Flow或者Typescript，
+
+12. 组件分为类组件和方法组件
+
+13. 一定要熟练运用jsx和纯js的组件写法
+
+14. fragments使用`<></>`
+
+15. `Live Reloading`和`Hot Reloading`的区别
+
+    >**Live reloading** reloads or refreshes the entire app when a file changes. For example, if you were four links deep into your navigation and saved a change, live reloading would restart the app and load the app back to the initial route.
+    >
+    >**Hot reloading** only refreshes the files that were changed without losing the state of the app. For example, if you were four links deep into your navigation and saved a change to some styling, the state would not change, but the new styles would appear on the page without having to navigate back to the page you are on because you would still be on the same page.
 
 
 
@@ -166,3 +191,54 @@ date: 2017-12-07 11:08:00 +0800
 2. 组件可看着是js中的方法，返回值是元素
 3. jsx中用户定义的组件的所有属性会被当做一个对象，这个对象就是所说的"props"
 4. 用户定义组件的首字母要大写，与dom中定义的tag区别开来
+
+
+
+#### 使用Webstrom开发React Native App
+
+参考文章：[Developing mobile apps with React Native in WebStorm](https://blog.jetbrains.com/webstorm/2016/12/developing-mobile-apps-with-react-native-in-webstorm/)
+
+1. 在项目中排除了android和ios两个目录
+
+2. 在webstorm中想通过node来调试的话，node版本需要7.0以上版本
+
+3. 首先启动模拟器，新建配置文件，运行配置即可启动到调试状态
+
+4. flow占有资源特别高，如果不想装，可以跳过这个，不用安装。[安装flow](https://flow.org/en/docs/install/)来对错误检查的增强，不需要全局安装，安装到具体项目就行
+
+   ```shell
+   #安装flow之前，需要首先安装编译器，
+   npm install --save-dev babel-cli babel-preset-flow
+   #在.babelrc中添加presets
+   {
+     "presets": ["flow"]
+   }
+
+   #安装flow
+   npm install --save-dev flow-bin
+   #在package.json中添加flow到npm scripts
+   {
+     "name": "my-flow-project",
+     "version": "1.0.0",
+     "devDependencies": {
+       "flow-bin": "^0.41.0"
+     },
+     "scripts": {
+       "flow": "flow"
+     }
+   }
+   #首次运行
+   npm run flow init
+   #以后运行时，不需要加init，只有第一次才要加
+   npm run flow
+   ```
+
+5. 调试app时，需要开启js远程调试，查看react 的dom结构的话，可以用react-devtools来查看
+
+6. 调试js时，建议开启chrome的`Pause on caught exceptions`参考链接<https://stackoverflow.com/questions/2233339/javascript-is-there-a-way-to-get-chrome-to-break-on-all-errors/17324511#17324511>
+
+7. 调试有多种方法
+
+   + 方法一：调试通过 [Create React App](https://github.com/facebookincubator/create-react-app)创建的React Native项目[Debugging React apps created with Create React App in WebStorm](https://blog.jetbrains.com/webstorm/2017/01/debugging-react-apps/)
+   + 方法二：官网方法：开启in-app的远程调试结合react-devtools来调试。（为什么需要react-devtools?因为chrome的插件不支持react-native，所以需要单独的调试工具）
+   + 方法三：通过webstorm来调试，参考文章[Developing mobile apps with React Native in WebStorm](https://blog.jetbrains.com/webstorm/2016/12/developing-mobile-apps-with-react-native-in-webstorm/)，这个文章里有一个地方，需要修改一下，就是需要手动运行run-android命名才行
