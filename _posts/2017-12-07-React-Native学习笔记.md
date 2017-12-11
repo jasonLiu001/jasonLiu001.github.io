@@ -123,7 +123,12 @@ date: 2017-12-07 11:08:00 +0800
    ```shell
    npm install --save-dev babel-cli babel-preset-flow
    ```
-
+5. （可选安装）安装[chocolatey](https://chocolatey.org/install)
+    安装`chocolatey`的好处在于可以在命令行里进行软件的安装和卸载操作，非常方便
+    ```shell
+    #通过powershell安装
+    Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+    ```
    ​
 
 #### JSX学习
