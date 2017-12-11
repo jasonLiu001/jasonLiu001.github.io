@@ -131,3 +131,9 @@ notepad 文件名
 Remove-Item 文件名
 ```
 
+#### 使环境变量生效，不用重新打开powershell
+
+```powershell
+RefreshEnv
+```
+

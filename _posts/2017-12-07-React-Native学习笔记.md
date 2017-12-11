@@ -16,7 +16,7 @@ date: 2017-12-07 11:08:00 +0800
 3. es5
 4. html，DOM
 5. AMD、CMD、CommonJS、UMD
-6. Java、C#、Objective-C
+6. Java、C#、Objective-C中的一种
 
 
 
@@ -128,7 +128,7 @@ date: 2017-12-07 11:08:00 +0800
 
 #### JSX学习
 
-`jsx`不是字符串也不是html，它可以作为表达式来用，`()`在`jsx` 中没有什么特别的意思，`()`是一个整体的意思，不会守到js的[自动插入分号功能](https://stackoverflow.com/questions/2846283/what-are-the-rules-for-javascripts-automatic-semicolon-insertion-asi)影响
+`jsx`不是字符串也不是html，它可以作为表达式来用，`()`在`jsx` 中没有什么特别的意思，`()`是一个整体的意思，不会受到js的[自动插入分号功能](https://stackoverflow.com/questions/2846283/what-are-the-rules-for-javascripts-automatic-semicolon-insertion-asi)影响
 
 1. 冒号`""`和`{}`不能同时使用，`{}`在jsx是表达式的意思
 
@@ -141,11 +141,11 @@ date: 2017-12-07 11:08:00 +0800
 5. DOM和html没有必然的联系，jsx和html类似都是用于描述dom的语言
 
 6. `jsx`中体现了ES6的特性，在webstorm中对jsx有很好的支持
-   + 在webstorm中如果启用对`jsx`的支持<http://babeljs.io/docs/editors>
-   + ES6对应的几种转换器：Typescript、Traceur、Babel，参考文章<http://2ality.com/2015/04/deploying-es6.html>
-   + 优秀文章，关于如何将ES6编写的脚步转换为ES5，<http://2ality.com/2015/04/deploying-es6.html>
+   + 在webstorm中如何[启用对`jsx`的支持](http://babeljs.io/docs/editors)
+   + ES6对应的几种转换器：Typescript、Traceur、Babel，参考文章[deploying-es6](http://2ality.com/2015/04/deploying-es6.html)
+   + 优秀文章，关于如何将ES6编写的脚步转换为ES5，[deploying-es6](http://2ality.com/2015/04/deploying-es6.html)
 
-7. 在.net中也可以使用JSX语法，参照<https://reactjs.net/>。在.net中通过babel提供的api也可以实现将jsx转换为普通的javascript，参考文档<http://babeljs.io/docs/setup/#installation>
+7. 在.net中也可以使用JSX语法，参照[reactjs.net](https://reactjs.net/)。在.net中通过babel提供的api也可以实现将jsx转换为普通的javascript，参考文档[Babel](http://babeljs.io/docs/setup/#installation)
 
 8. jsx和普通模板语言的最大区别，jsx是在js中嵌入xml语言标记，其他都是在语言中嵌入js，比如html中如果使用模板语法，导入js，并且编写js脚本
 
@@ -235,10 +235,10 @@ date: 2017-12-07 11:08:00 +0800
 
 5. 调试app时，需要开启js远程调试，查看react 的dom结构的话，可以用react-devtools来查看
 
-6. 调试js时，建议开启chrome的`Pause on caught exceptions`参考链接<https://stackoverflow.com/questions/2233339/javascript-is-there-a-way-to-get-chrome-to-break-on-all-errors/17324511#17324511>
+6. 调试js时，建议开启chrome的`Pause on caught exceptions`参考链接[javascript-is-there-a-way-to-get-chrome-to-break-on-all-errors](https://stackoverflow.com/questions/2233339/javascript-is-there-a-way-to-get-chrome-to-break-on-all-errors/17324511#17324511)
 
 7. 调试有多种方法
 
    + 方法一：调试通过 [Create React App](https://github.com/facebookincubator/create-react-app)创建的React Native项目[Debugging React apps created with Create React App in WebStorm](https://blog.jetbrains.com/webstorm/2017/01/debugging-react-apps/)
    + 方法二：官网方法：开启in-app的远程调试结合react-devtools来调试。（为什么需要react-devtools?因为chrome的插件不支持react-native，所以需要单独的调试工具）
-   + 方法三：通过webstorm来调试，参考文章[Developing mobile apps with React Native in WebStorm](https://blog.jetbrains.com/webstorm/2016/12/developing-mobile-apps-with-react-native-in-webstorm/)，这个文章里有一个地方，需要修改一下，就是需要手动运行run-android命名才行
+   + 方法三：通过webstorm来调试，参考文章[Developing mobile apps with React Native in WebStorm](https://blog.jetbrains.com/webstorm/2016/12/developing-mobile-apps-with-react-native-in-webstorm/)，这个文章里有一个地方，需要修改一下，就是需要手动运行run-android命令才行
