@@ -217,18 +217,19 @@ date: 2017-12-07 11:08:00 +0800
 
 > 网上的很多都是通过adb kill-server来解决，但是在自己这死活不好使，重启电脑好使，哈哈
 
-其他解决办法，安装截图上面命令的顺序运行,主要和本地的VirtualBox冲突
-![Could not create ADB Bridge](/assets/img/android-can-not-adb-bridge.png)
-
-下面是执行的命令顺序：
+其他解决办法
+1. 首先把模拟器返回到主屏，千万不要让上次运行的RN app开启，回到主屏界面
+2. 然后执行的下面的命令：
 ```shell
-# 关闭本地的VBoxmanage 虚拟机
-VBoxmanage controlvm "centos-01" poweroff
 # 停止adb deamon
 adb kill-server
-# 重新开启 adb deamon  在运行`run-android`命令的过程中，运行2到3次才行，不知道为什么
+# 执行adb devices  在运行`run-android`命令的过程中
+# 在node的窗口出现前，执行adb devices命令 2到3次才行，不知道为什么
+# node窗口中出现Loading dependency graph,done.的提示，才表示正常，如果没有done，则会安装失败
 adb devices
 ```
+参见下面的截图
+![android-can-not-adb-bridge](/assets/img/android-can-not-adb-bridge.png)
 
 
 
