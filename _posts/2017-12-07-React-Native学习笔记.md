@@ -24,8 +24,6 @@ date: 2017-12-07 11:08:00 +0800
 
 尽量不要按照`QuickStart`中配置，因为`QuickStart`中的例子是用expo的方式来创建的项目，所以在运行时候，可能会遇到expo项目遇到的问题。尽量按照`Build Project with Native Code`里面的说明来配置环境，可以避免自己少走弯路，节约学习时间和成本。
 
-
-
 #### 【Demo项目推荐用，正式项目不推荐】通过Expo的xde来创建及运行项目
 
 > 特别说明：
@@ -59,7 +57,7 @@ date: 2017-12-07 11:08:00 +0800
        "@expo/samples": "2.1.1",
        "expo": "^23.0.0",  //步骤1.这里需要修改为"23.0.0"
        "react": "16.0.0",
-       "react-native": "https://github.com/expo/react-native/archive/sdk-23.0.0.tar.gz",   //步骤2.这里需要修改为："0.50.3"，和上面保持一致
+       "react-native": "https://github.com/expo/react-native/archive/sdk-23.0.0.tar.gz",   //步骤2.这里需要修改为："0.50.3"，和最新的React-Native版本保持一致
        "react-navigation": "^1.0.0-beta.19"
      },
      "devDependencies": {
@@ -129,7 +127,7 @@ date: 2017-12-07 11:08:00 +0800
     #通过powershell安装
     Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
     ```
-   ​
+       ​
 
 #### JSX学习
 
@@ -137,7 +135,7 @@ date: 2017-12-07 11:08:00 +0800
 
 1. 冒号`""`和`{}`不能同时使用，`{}`在jsx是表达式的意思
 
-2. 命名规则驼峰命名，首字母小写，这个和html属性的规则有区别，html属性都是小写的
+2. 命名规则驼峰命名，首字母小写，这个和html属性的规则有区别，html属性都是小写的，用过data自定义属性的就会深有体会，如果包含大写字符，是无法取到对应的属性的
 
 3. tag必须有对应的结束标记
 
@@ -152,7 +150,7 @@ date: 2017-12-07 11:08:00 +0800
 
 7. 在.net中也可以使用JSX语法，参照[reactjs.net](https://reactjs.net/)。在.net中通过babel提供的api也可以实现将jsx转换为普通的javascript，参考文档[Babel](http://babeljs.io/docs/setup/#installation)
 
-8. jsx和普通模板语言的最大区别，jsx是在js中嵌入xml语言标记，其他都是在语言中嵌入js，比如html中如果使用模板语法，导入js，并且编写js脚本
+8. jsx和普通模板语言的最大区别，jsx是在js中嵌入xml语言标记，其他类似xml语言都是在语言中嵌入js，比如html中如果使用模板语法，导入js，并且编写js脚本
 
 9. 在子组件中有构造函数时，构造函数中需要调用super方法
 
@@ -190,6 +188,14 @@ date: 2017-12-07 11:08:00 +0800
 
 待学习
 
+#### RN 调用原生模块的实现原理
+
+待深入
+
+#### RN 调用原生模块的异步实现原理
+
+待深入
+
 #### React学习
 
 1. 元素是react的最小构成块，在屏幕中能够看到的都属于元素
@@ -197,6 +203,22 @@ date: 2017-12-07 11:08:00 +0800
 3. jsx中用户定义的组件的所有属性会被当做一个对象，这个对象就是所说的"props"
 4. 用户定义组件的首字母要大写，与dom中定义的tag区别开来
 
+
+#### React Native运行时问题汇总
+
+###### Could not create ADB Bridge
+
+解决步骤：
+
+1. 删除电脑中旧的android-sdk
+2. 下载最新的android studio，通过android studio安装需要的android-sdk版本，其他的不需要可以不去安装，具体安装的版本参考[react native的官网说明](http://facebook.github.io/react-native/docs/getting-started.html)，按照上面的安装时没有问题的
+3. 新的android-sdk安装完成后，最好重启电脑
+4. 再次运行`react-native`应用，运行`react-native run-android`最好是 **通过管理员身份** 来运行，避免不必要的错误，自己在这个上面也耽误了不少时间
+
+> 网上的很多都是通过adb kill-server来解决，但是在自己这死活不好使，重启电脑好使，哈哈
+
+**经过自己的不懈努力，终于发现运行不起来的根本原因，和本地的Outlook有冲突，关闭outlook客户端，重新运行`run-android`命令，一切正常。很郁闷，不知道这是怎么回事，目前还没有查找到outlook导致不能运行的原因**
+![Could not create ADB Bridge](/assets/img/android-can-not-adb-bridge.png)
 
 
 #### 使用Webstrom开发React Native App
@@ -246,4 +268,31 @@ date: 2017-12-07 11:08:00 +0800
 
    + 方法一：调试通过 [Create React App](https://github.com/facebookincubator/create-react-app)创建的React Native项目[Debugging React apps created with Create React App in WebStorm](https://blog.jetbrains.com/webstorm/2017/01/debugging-react-apps/)
    + 方法二：官网方法：开启in-app的远程调试结合react-devtools来调试。（为什么需要react-devtools?因为chrome的插件不支持react-native，所以需要单独的调试工具）
-   + 方法三：通过webstorm来调试，参考文章[Developing mobile apps with React Native in WebStorm](https://blog.jetbrains.com/webstorm/2016/12/developing-mobile-apps-with-react-native-in-webstorm/)，这个文章里有一个地方，需要修改一下，就是需要手动运行run-android命令才行
+   + 方法三：通过webstorm来调试，参考文章[Developing mobile apps with React Native in WebStorm](https://blog.jetbrains.com/webstorm/2016/12/developing-mobile-apps-with-react-native-in-webstorm/)，这个文章里有一个地方，需要修改一下，就是需要手动运行run-android命令才行￥
+
+#### ES6
+
+1. `export default`一个模块中只有一个，`export`可以有多个
+2. ​
+
+#### 创建React Native项目
+
+创建项目的前提条件：nodejs、jdk、npm、yarn、android-sdk，python2、react-native-cli、windows-build-tools都全部配置完成，其中node版本最好是7.0以上，jdk最低jdk8，python2和windows-build-tools安装其中一个即可，windows-build-tools中已经包含了python2，不需要重复安装，一切就绪，就可以安装下面的步骤来创建React-Native项目了
+
+1. 切换到想要创建项目的目录下，通过
+
+   ```powershell
+   react-native init 项目名称
+   ```
+
+2. 首先启动模拟器，运行android应用
+
+   ```shell
+   react-native run-android
+   ```
+
+   运行错误：`Could not create ADB Bridge`，参见上面的[Could not create ADB Bridge](#Could not create ADB Bridge)解决方法
+
+3. ​
+
+   ​
