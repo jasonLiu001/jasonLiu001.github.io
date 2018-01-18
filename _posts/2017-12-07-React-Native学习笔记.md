@@ -231,7 +231,14 @@ adb devices
 参见下面的截图
 ![android-can-not-adb-bridge](/assets/img/android-can-not-adb-bridge.png)
 
+###### signatures do not match the previously installed version
 
+不同平台开发的切换，在原手机上还有之前的安装包，在不同平台上安装应用，都会对应一个签名。比如：从mac到win上的切换或者win到mac上的切换，在切换之前，手机上已经打包了之前平台的应用，那么在新平台上重新安装就会报上这个错误
+
+解决方法：
+
+1. 手动卸载之前应用，在新平台上重新安装
+2. 或者使用adb命令来卸载： $ adb uninstall <packageName>
 
 #### 使用Webstrom开发React Native App
 
@@ -305,6 +312,19 @@ adb devices
 
    运行错误：`Could not create ADB Bridge`，参见上面的[Could not create ADB Bridge](#Could not create ADB Bridge)解决方法
 
-3. ​
+#### 组件的目录组织
 
-   ​
+#### 组件平台区分
+
+1. 通过Platform模块来区分
+2. 通过.ios和.android的扩展名来区分
+
+
+#### ToolbarAndroid这个组件使用，需要增加高度值
+
+```shell
+ <ToolbarAndroid
+                style={{height: 100}}
+                title="ToolbarAndroid"/>
+```
+
