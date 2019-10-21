@@ -10,9 +10,6 @@ show_sidebar: true
 
 This website showcases the options for the Bulma Clean theme. The theme is available as a ruby gem or can be used with GitHub pages. 
 
-[![Gem Version](https://badge.fury.io/rb/bulma-clean-theme.svg)](https://badge.fury.io/rb/bulma-clean-theme)
-![Gem](https://img.shields.io/gem/dt/bulma-clean-theme.svg)
-
 ## Ruby Gem
 
 The ruby gem is available on the Ruby Gems website at the following location. [https://rubygems.org/gems/bulma-clean-theme](https://rubygems.org/gems/bulma-clean-theme)
@@ -48,5 +45,3 @@ This demo site showcases the available page layout options.
 ## Supported By JetBrains
 
 JetBrains have kindly provided an Open Source licence to aid in the future development of Bulma Clean Theme.
-
-[![JetBrains](img/jetbrains-variant-4.svg)](https://www.jetbrains.com/?from=bulma-clean-theme)
