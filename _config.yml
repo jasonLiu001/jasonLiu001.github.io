@@ -9,7 +9,7 @@ url: ""
 permalink: pretty
 #favicon: /path/to/favicon.png
 
-paginate: 5
+paginate: 10
 paginate_path: "/blog/page:num"
 
 plugins:
