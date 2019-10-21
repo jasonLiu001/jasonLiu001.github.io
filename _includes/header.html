@@ -1,13 +1,36 @@
-<nav class="navbar navbar-expand-md sticky-top bg-primary navbar-dark">
-    <a class="navbar-brand" href="/">首页</a>
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
-            class="navbar-toggler-icon"></span></button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="/about">关于作者</a>
-            </li>
-        </ul>
+<nav class="navbar is-primary" >
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="{{ site.baseurl }}/" class="navbar-item">
+                Jason
+            </a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-start">
+                <a href="{{ site.baseurl }}/" class="navbar-item {% if page.url == "/" %}is-active{% endif %}">主页</a>
+                {% if site.data.navigation %}
+                {% for item in site.data.navigation %}
+                    {% if item.dropdown %}
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a href="{{ item.link | prepend: site.baseurl }}" class="navbar-link {% if item.link == page.url %}is-active{% endif %}">{{ item.name }}</a>
+                        <div class="navbar-dropdown">
+                            {% for subitem in item.dropdown %}
+                            <a href="{{ subitem.link | prepend: site.baseurl }}" class="navbar-item {% if subitem.link == page.url %}is-active{% endif %}">{{ subitem.name }}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% else %}
+                    <a href="{{ item.link | prepend: site.baseurl }}" class="navbar-item {% if item.link == page.url %}is-active{% endif %}">{{ item.name }}</a>
+                    {% endif %}
+                {% endfor %}
+                {% endif %}
+            </div>
+        </div>
     </div>
 </nav>

@@ -1,26 +1,16 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-    <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
-        <p class="post-meta">
-            <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-                {% assign date_format = site.minima.date_format | default: "%Y-%m-%d" %}
-                {{ page.date | date: date_format }}
-            </time>
-            {% if page.author %}
-            • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
-            {% endif %}
-        </p>
-    </header>
+<div class="content">
 
-    <div class="post-content" itemprop="articleBody">
-        {{ content }}
-    </div>
+    <p>Published: {{ page.date | date: "%b %-d, %Y" }} by {{ page.author }}</p>
 
-</article>
+    {{ content }}
+</div>
 
-<!--评论区域-->
-{% include github-comments.html %}
+<div class="tags">
+    {% for tag in page.tags %}
+    <span class="tag is-primary">{{ tag }}</span>
+    {% endfor %}
+</div>

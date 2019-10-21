@@ -1,56 +1,75 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+# Site Settings
+title: Jason的博客
+tagline: Jason的博客
+email: 522914767@qq.com
+description: >
+  The site theme is powered by Bulma Clean Theme, build with Jekyll and ship with GitHub pages
+baseurl: ""
+url: ""
+permalink: pretty
+#favicon: /path/to/favicon.png
 
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: Jason
-email: ksjifjui@sina.com
-description: >- # this means to ignore newlines until "baseurl:"
-  C#、Javascript developer comes from China.
-github_username:  jasonLiu001
+paginate: 5
+paginate_path: "/blog/page:num"
 
-# 保存所有评论的github库
-github_comments_repository:  jasonLiu001/github-pages-comments
-
-# 文章分页设置
-paginate: 10
-paginate_path: "/page:num/"
-
-#theme: jekyll-theme-midnight
-theme: minima
 plugins:
   - jekyll-sitemap
   - jekyll-paginate
+  - jekyll-feed
   - jekyll-seo-tag
+  - kramdown
+  - rouge
 
-# 设置sass样式目录
-#sass:
-#  sass_dir: _sass
+exclude:
+  - Gemfile
+  - clean-theme.gemspec
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - Server.ts
+  - static
+  - config
+  - services
 
-# markdown引擎
-markdown: kramdown
+livereload: true
 
-# 设置所有文章的默认布局等信息
+sass:
+  style: compressed
+  source_dir: _sass
+
+#google_analytics: UA-code-here
+
 defaults:
   -
-     scope:
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      show_sidebar: true
+  -
+    scope:
       path: ""
       type: "posts"
-     values:
-      layout: "post"
-      author: "Jason Liu"
+    values:
+      author: "C.S. Rhymes"
+      layout: post
+      image: https://via.placeholder.com/1200x800
+      show_sidebar: true
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-exclude: ["script", "vendor", "bower.json", "Gemfile", "Gemfile.lock", "readme.md", "package.json"]
+markdown: kramdown
+highlighter: rouge
+
+# 底部的导航菜单
+# footer_menu: example_footer_menu
+
+collections:
+  products:
+    output: true
+    layout: product
+    image: https://via.placeholder.com/800x600
+    show_sidebar: false
+
+remote_theme: chrisrhymes/bulma-clean-theme

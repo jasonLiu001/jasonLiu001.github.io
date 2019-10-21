@@ -1,98 +1,21 @@
-<div class="bg-dark text-white">
+<footer class="footer">
     <div class="container">
-        <div class="row">
-            <div class="p-4 col-md-6">
-                <h2 class="mb-4 text-primary"><i class="fa fa-magic" aria-hidden="true"></i>&nbsp;&nbsp;该站点依赖技术</h2>
-                <ul>
-                    <li>
-                        <a href="https://jekyllrb.com/" class="text-white">Jekyll</a>
-                    </li>
-                    <li>
-                        <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>
-                    </li>
-                    <li>
-                        <a href="http://sass-lang.com/" class="text-white">SASS</a>
-                    </li>
-                    <li>
-                        <a href="http://fontawesome.io/icons/" class="text-white">FontAwesome</a>
-                    </li>
-                    <li>
-                        <a href="https://pingendo.com" class="text-white">Pingendo</a>
-                    </li>
-                    <li>
-                        <a href="https://www.ruby-lang.org/zh_cn/" class="text-white">Ruby</a>
-                    </li>
-                    <li>
-                        <a href="https://rubygems.org/?locale=zh-CN" class="text-white">RubyGems</a>
-                    </li>
-                    <li>
-                        <a href="http://bundler.io/" class="text-white">Bundler</a>
-                    </li>
-                    <li>
-                        <a href="https://pages.github.com/" class="text-white">Github Pages</a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" class="text-white">Markdown</a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/ziyasal/ymal" class="text-white">YMAL</a>
-                    </li>
-                    <li>
-                        <a href="https://shopify.github.io/liquid/" class="text-white">Liquid</a>
-                    </li>
-                </ul>
+        
+        {% if site.footer_menu %}
+        <div class="columns is-multiline">
+            {% for item in site.data[site.footer_menu] %}
+            <div class="column has-text-centered">
+                <div>
+                    <a href="{{ item.link | prepend: site.baseurl }}" class="link">{{ item.name }}</a>
+                </div>
             </div>
-            <div class="p-4 col-md-6">
-                <h2 class="mb-4 text-primary"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;关于作者</h2>
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="https://github.com/{{ site.github_username }}" class="text-white">
-                            <i class="fa fa-github" aria-hidden="true"></i>&nbsp;&nbsp;Jason Liu
-                        </a>
-                    </li>
-                    <li>
-                        <ul id="c_ulist" class="pi-draggable" draggable="true">
-                            <li>
-                                编程语言技术栈(按熟练运用程度排列)
-                                <ul>
-                                    <li>后端语言：C#、ASP.NET MVC、Node.js、dotNet Core、Java</li>
-                                    <li>前端语言：Javascript、SASS、Html</li>
-                                </ul>
-                            </li>
-                            <li>
-                                框架技术栈(按熟练运用程度排列)
-                                <ul>
-                                    <li>MVVM技术栈：Knockout.js、Angular</li>
-                                    <li>App技术栈：PWA App、Hybrid App</li>
-                                </ul>
-                            </li>
-                            <li>
-                                其他技能(按熟练运用程度排列)
-                                <ul>
-                                    <li>版本管理：Git、TFS、SVN</li>
-                                    <li>Linux操作能力：CentOS、Ubuntu</li>
-                                    <li>脚本编程能力：PowerShell、Batch、Linux Shell</li>
-                                    <li>开发工具：Visual Studio、WebStorm等</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul class="list-unstyled">
-                    <li>
-                        <a class="text-white" href="mailto:ksjifjui@sina.com">
-                            <i class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp;&nbsp;ksjifjui@sina.com
-                        </a>
-                    </li>
-                </ul>
-            </div>
+            {% endfor %}
         </div>
-        <div class="row">
-            <div class="col-md-12 mt-3">
-                <p class="text-center text-white">© Copyright 2017
-                    <a href="https://github.com/{{ site.github_username }}" class="text-primary">Jason Liu</a> - All
-                    rights reserved. </p>
-            </div>
+        {% endif %}
+
+        <div class="content is-small has-text-centered">
+            <p class="">Theme built by <a href="https://github.com/chrisrhymes/bulma-clean-theme" target="_blank">bulma-clean-theme</a></p>
+            <p class="">京ICP备18002969号-1</p>
         </div>
     </div>
-</div>
+</footer>
