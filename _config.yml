@@ -7,7 +7,7 @@ description: >
 baseurl: ""
 url: ""
 permalink: pretty
-#favicon: /path/to/favicon.png
+favicon: /favicon.png
 
 paginate: 10
 paginate_path: "/blog/page:num"
